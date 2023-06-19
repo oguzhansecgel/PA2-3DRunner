@@ -16,7 +16,13 @@ public class CollectCoin : MonoBehaviour
 
         }
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Çarpýþma");
+        }
+    }
     public void AddCoin()
     {
         score++;
